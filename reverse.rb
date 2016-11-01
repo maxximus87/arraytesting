@@ -17,9 +17,15 @@ class Array
     hash
 	end
 
+	def single_index_value(obj)
+		result = nil
+		self.each_with_index do |val, index|
+			if val == obj
+				result = index
+				break
+			end
+		end
+		result
+	end
 end
 end
-
-
-
-

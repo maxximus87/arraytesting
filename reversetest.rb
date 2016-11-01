@@ -24,6 +24,11 @@ class TestMyReverse < Minitest::Test
 
 	def test_index_position
 		arr = ["a", "b", "c", "a", "b", "d", "c"]
-		assert_equal({"a"=>[0,3], "b"=>[1,4], "c"=>[2,6], "d"=>[5]}, arr.my_index_position())
+		assert_equal({"a"=> [0,3], "b"=> [1,4], "c"=> [2,6], "d"=>[5]}, arr.my_index_position())
+	end
+
+	def test_single_index_value
+		arr = ["a", "b", "c", "a", "b", "d", "c"]
+		assert_equal(5, arr.single_index_value("d"))
 	end
 end
